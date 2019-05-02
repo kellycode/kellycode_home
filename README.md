@@ -1,3 +1,3 @@
-# Terrain Editor
+# Kellycode Home
 
-Height map editor
+My home page
