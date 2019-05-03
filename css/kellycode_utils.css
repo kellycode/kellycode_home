@@ -1,0 +1,32 @@
+
+/* 
+    Created on  : Dec 1, 2014, 11:24:05 AM
+    Author      : kwkelly
+    Usage       : For the items in kellycode-util.js
+*/
+
+.kellycode_hover_text {
+    background-color: #FFF;
+    border: 1px solid #007185;
+    box-shadow: 3px 3px 3px #969696;
+    border-radius: 4px;
+    display: none;
+    color: #222222;
+    text-align: center;
+    position: absolute;
+    padding: 4px 8px;
+    opacity: 1.0;
+    text-align: left;
+    cursor: default;
+}
+
+.hovering_btm_rt, .hovering_btm_lf {
+    cursor: pointer;
+}
+
+.closerImg {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    cursor: pointer;
+}

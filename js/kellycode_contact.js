@@ -12,7 +12,7 @@ angular.module('contactApp', [])
 
                 // the contact button is external to the angular scope here so
                 // get a handle to it and add a click listener method
-                angular.element('#contact_button').on('click', function () {
+                angular.element('#chatButton').on('click', function () {
                     angular.element('#contact_cancel').triggerHandler('click');
                 });
 
@@ -40,18 +40,16 @@ angular.module('contactApp', [])
                         $scope.formData.content = '';
                         $scope.serverResponse = response.xhrStatus;
                         $scope.contactStatus = 'Success';
-                        
-                        // use the Contact button to present success validation
-                        $('#contact_button').addClass('disabled').removeClass('btn-outline-secondary').html('&#128076;'); // OK symbol
-                        //
+
                         // send the contact form away
                         $scope.toggleCommentVis();
                         
-                        // wait a bit and reset the Contact button
+                        // display a notification, wait a bit wait a bit and remove it
+                        $('#contactNotify').addClass('all_good').html('Success! &#128522;');
                         $timeout(function () {
-                            $('#contact_button').addClass('btn-outline-secondary').removeClass('disabled').html('&#9993;'); // Mail symbol
+                            $('#contactNotify').removeClass('all_good').html('');
                             ;
-                        }, 5000);
+                        }, 3500);
                         
                     }, function (response) {
                         // no success
@@ -61,15 +59,16 @@ angular.module('contactApp', [])
                         $scope.serverResponse = response.xhrStatus;
                         $scope.contactStatus = 'Failure';
 
-                        // display failed send with a sad face
-                        $('#contact_button').addClass('disabled').removeClass('btn-outline-secondary').html('&#9785;'); // sad face symbol
                         // hide the form
                         $scope.toggleCommentVis();
-                        // wait a bit and reset the Contact button
-                        $timeout(function () {
-                            $('#contact_button').addClass('btn-outline-secondary').removeClass('disabled').html('&#9993;'); // Mail symbol
-                        }, 5000);
                         
+                        // display a notification, wait a bit wait a bit and remove it
+                        $('#contactNotify').addClass('not_good').html('Something went wrong! &#128533;');
+                        $timeout(function () {
+                            $('#contactNotify').removeClass('not_good').html('');
+                            ;
+                        }, 3500);
+
                         // erase text in the form to discourage malicious repeat sends
                         $scope.formData.content = '';
                     });
