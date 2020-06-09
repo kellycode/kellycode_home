@@ -18,7 +18,7 @@ angular.module('contactApp', [])
 
                 $scope.formData = {
                     content: '',
-                    sendername: '',
+                    username: '',
                     avatar_url: ''
                 };
 
@@ -41,7 +41,7 @@ angular.module('contactApp', [])
                         
                         // erase text in the form to discourage malicious sends
                         $scope.formData.content = '';
-                        $scope.formData.sendername = '';
+                        $scope.formData.username = '';
                         $scope.serverResponse = response.xhrStatus;
                         $scope.contactStatus = 'Success';
 
@@ -61,7 +61,7 @@ angular.module('contactApp', [])
                         // log the response info
                         // erase text in the form to discourage malicious sends
                         $scope.formData.content = '';
-                        $scope.formData.sendername = '';
+                        $scope.formData.username = '';
                         $scope.serverResponse = response.xhrStatus;
                         $scope.contactStatus = 'Failure';
 
