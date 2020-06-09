@@ -60,14 +60,14 @@
                 Github
             </span>
 
-<!--        TODO Update eventually 
+            <!--        TODO Update eventually -->
             <div id="chatButton" class="hidden_icon hovering_rt" >
                 <img data-toggle="modal" data-target="#kContactCenter" src="img/chat_img.png" alt=""/>
             </div>
 
             <span class="kellycode_hover_text">
                 Send a messege
-            </span>-->
+            </span>
 
             <a id="discordLink" class="hidden_icon hovering_rt" href="https://discord.gg/EB9vtyY">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-label="Discord" role="img" viewBox="0 0 512 512" height="40" width="40" >
@@ -103,12 +103,22 @@
                                 <h5>Contact KellyCode</h5>
                             </div>
                             <div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">Name&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    </div>
+                                    <input type="text" class="form-control" ng-model="formData.sendername" placeholder="Your name" aria-label="Your name" aria-describedby="basic-addon1" required>
+                                </div>
+
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Message</span>
                                     </div>
-                                    <textarea id="kContactText" type="text" name="contentText" ng-model="formData.content" class="form-control" required></textarea>
+                                    <textarea id="kContactText" style="resize: none;" type="text" name="contentText" ng-model="formData.content" class="form-control" required></textarea>
                                 </div>
+
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" id='contact_cancel' class="btn btn-secondary" ng-click='cancel();'>Cancel</button>

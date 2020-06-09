@@ -3,6 +3,9 @@ if (!window.KELLYCODE_UTILS) {
     window.KELLYCODE_UTILS = {};
 }
 
+
+// just some items I often use
+
 // UTILITY SORTING METHODS
 // Generic Sorting of objects by value key
 // with the addition of handling odd characters
