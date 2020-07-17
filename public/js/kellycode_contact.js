@@ -8,7 +8,7 @@ angular.module('contactApp', [])
                 // contact form visibility toggle
                 $scope.toggleCommentVis = function () {
                     $scope.isVisible = !$scope.isVisible;
-                }
+                };
 
                 // the contact button is external to the angular scope here so
                 // get a handle to it and add a click listener method
@@ -78,9 +78,6 @@ angular.module('contactApp', [])
                         // erase text in the form to discourage malicious repeat sends
                         $scope.formData.content = '';
                     });
-                    
-                    
-                    
-                    
+
                 };
             }]);

@@ -15,8 +15,7 @@
 
         <!-- standard meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0">
 
         <meta name="description" content="KellyCode Web Development">
         <meta name="keywords" content="Javascript Developer. Web Developer, Angular Developer">
@@ -66,7 +65,6 @@
         <link href="css/kellycode_utils.css" rel="stylesheet" type="text/css"/>
 
         <!-- bootstrap css -->
-        <!--        <link href="css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
         <link href="css/vendor/bootstrap/bootstrap_4.4.1_darkly/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
         <!-- javascript dependencies -->
@@ -80,17 +78,17 @@
 
         <!-- check for js for css effect but not using atm -->
         <script>
-    $('html').removeClass('no_js').addClass('has_js');
+            $('html').removeClass('no_js').addClass('has_js');
         </script>
 
     </head>
     <body>
 
         <!-- iFrame pulling in a project from Github -->
-        <iframe id="github_repo" src="https://kellycode.github.io/us-covid19-at-a-glance/" ></iframe>
+        <iframe aria-label="Covid-19 chart displayed from Github content" id="github_repo" src="https://kellycode.github.io/us-covid19-at-a-glance/" ></iframe>
 
         <!-- sidebar and it's icons -->
-        <div id="leftSideBar" class='show_icons'>
+        <div id="leftSideBar" class='hide_icons'>
 
             <!-- kellycode logo -->
             <img id="siteLogo" class="hovering_rt" src="img/kellycode_logo_sm.png" alt="">
@@ -197,13 +195,14 @@
         </section>
 
         <script>
-            KELLYCODE_UTILS.Tooltip.init();
             // if we're on a touch device, add a
             // click handler where using a hover css
             if (Modernizr.touchevents) {
-                $("#leftSideBar").click(function () {
-                    $(this).toggleClass("hide_icons show_icons");
+                $("#siteLogo").click(function () {
+                    $("#leftSideBar").toggleClass("hide_icons show_icons");
                 });
+            } else {
+                KELLYCODE_UTILS.Tooltip.init();
             }
         </script>
 
