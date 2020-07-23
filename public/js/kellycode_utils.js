@@ -6,6 +6,21 @@ if (!window.KELLYCODE_UTILS) {
 
 // just some items I often use
 
+// sets an orientation class on the document body
+KELLYCODE_UTILS.screenWatch = function () {
+    
+    $(window).on("load resize orientationchange", function () {
+        if(screen.orientation.type === "landscape-primary") {
+            $(document.body).removeClass('portrait');
+            $(document.body).addClass('landscape');
+        }
+        else if(screen.orientation.type === "portrait-primary") {
+            $(document.body).removeClass('landscape');
+            $(document.body).addClass('portrait');
+        }
+    });
+};
+
 // UTILITY SORTING METHODS
 // Generic Sorting of objects by value key
 // with the addition of handling odd characters
@@ -187,38 +202,38 @@ KELLYCODE_UTILS.urlParam = function (name) {
 
 //Usage:
 /*
-// Alphanumeric:
-$("#intTextBox").inputFilter(function (value) {
-    return /^[0-9a-z]+$/.test(value);
-});
-
-// Integer (both positive and negative):
-$("#intTextBox").inputFilter(function (value) {
-    return /^-?\d*$/.test(value);
-});
-
-// Integer (positive only):
-$("#uintTextBox").inputFilter(function (value) {
-    return /^\d*$/.test(value);
-});
-
-// Integer (positive and <= 500):
-$("#intLimitTextBox").inputFilter(function (value) {
-    return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 500);
-});
-
-// Floating point (use . or , as decimal separator):	
-$("#floatTextBox").inputFilter(function (value) {
-    return /^-?\d*[.,]?\d*$/.test(value);
-});
-
-// Currency (at most two decimal places):
-$("#currencyTextBox").inputFilter(function (value) {
-    return /^-?\d*[.,]?\d{0,2}$/.test(value);
-});
-
-// Hexadecimal:
-$("#hexTextBox").inputFilter(function (value) {
-    return /^[0-9a-f]*$/i.test(value);
-});
-*/
+ // Alphanumeric:
+ $("#intTextBox").inputFilter(function (value) {
+ return /^[0-9a-z]+$/.test(value);
+ });
+ 
+ // Integer (both positive and negative):
+ $("#intTextBox").inputFilter(function (value) {
+ return /^-?\d*$/.test(value);
+ });
+ 
+ // Integer (positive only):
+ $("#uintTextBox").inputFilter(function (value) {
+ return /^\d*$/.test(value);
+ });
+ 
+ // Integer (positive and <= 500):
+ $("#intLimitTextBox").inputFilter(function (value) {
+ return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 500);
+ });
+ 
+ // Floating point (use . or , as decimal separator):	
+ $("#floatTextBox").inputFilter(function (value) {
+ return /^-?\d*[.,]?\d*$/.test(value);
+ });
+ 
+ // Currency (at most two decimal places):
+ $("#currencyTextBox").inputFilter(function (value) {
+ return /^-?\d*[.,]?\d{0,2}$/.test(value);
+ });
+ 
+ // Hexadecimal:
+ $("#hexTextBox").inputFilter(function (value) {
+ return /^[0-9a-f]*$/i.test(value);
+ });
+ */

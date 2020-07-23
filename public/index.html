@@ -15,7 +15,8 @@
 
         <!-- standard meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0">
+<!--        <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0">-->
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
 
         <meta name="description" content="KellyCode Web Development">
         <meta name="keywords" content="Javascript Developer. Web Developer, Angular Developer">
@@ -85,7 +86,7 @@
     <body>
 
         <!-- iFrame pulling in a project from Github -->
-        <iframe aria-label="Just a floating clouds place holder iframe" id="github_repo" src="https://kellycode.github.io/canvas_clouds/" ></iframe>
+        <iframe aria-label="Midi enabled piano tool kit" id="kellycode_iframe" src="./keyboard-kit/index.html" height="100%" width="100%" frameborder="0"></iframe>
 
         <!-- sidebar and it's icons -->
         <div id="leftSideBar" class='hide_icons'>
@@ -201,9 +202,13 @@
                 $("#siteLogo").click(function () {
                     $("#leftSideBar").toggleClass("hide_icons show_icons");
                 });
-            } else {
+            }
+            else {
                 KELLYCODE_UTILS.Tooltip.init();
             }
+
+            KELLYCODE_UTILS.screenWatch(window);
+
         </script>
 
     </body>
