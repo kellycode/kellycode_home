@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>US COVID-19 At A Glance</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+
+        <!-- STUFF -->
+        <link rel="shortcut icon" href="./favicons/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="./favicons/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="./favicons/favicon-192.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="./favicons/favicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="./favicons/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16.png">
+        <link rel="apple-touch-icon" href="./favicons/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicons/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicons/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicons/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicons/favicon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicons/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicons/favicon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicons/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicons/favicon-180.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="./favicons/favicon-144.png">
+        <meta name="msapplication-config" content="./data/browserconfig.xml">
+
+        <!-- MORE STUFF -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="U.S. Covid-19 Tested, Confirmed, Deaths">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@KearnanKelly">
+        <meta name="twitter:creator" content="@KearnanKelly">
+        <link rel="canonical" href="https://www.kellycode.com/uscovid/index.html">
+        <meta name="description" content="Coronavirus COVID-19 U.S. Tested, Confirmed, Death & Data at a Glance">
+        <meta property="og:title" content="US COVID-19 At A Glance">
+        <meta property="og:url" content="https://www.kellycode.com/uscovid/index.html">
+        <meta property="og:description" content="Coronavirus COVID-19 U.S. Tested, Confirmed, Death & Data at a Glance">
+        <meta property="og:image" content="https://www.kellycode.com/uscovid/img/sm_preview.png">
+        <meta property="og:image:secure_url" content="https://www.kellycode.com/uscovid/img/sm_preview.png">
+
+        <!-- CSS -->
+        <link href="css/uscovid.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- LIBS -->
+        <script src="js/uscovid.libs.min.js" type="text/javascript"></script>
+        
+
+    </head>
+    <body>
+        <!-- chart container -->
+        <div id="chartdiv" aria-describedby="statistics_summary_dialog"></div>
+        <!-- cheesy spinner image -->
+        <img aria-label="Chart loading spinner image" id="loading_img" src="./img/loading.png" alt="Loading image"/>
+        <!-- simple text status update container -->
+        <div aria-label="Chart loading status update" id="status_update"></div>
+
+        <!-- bottom container with links and chart select buttons -->
+        <div id="data_source" class="">
+            <span id="linksLeft">
+                Data source: &nbsp;<a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports_us/" target="_blank">GitHub</a>
+                &nbsp;Provided by: &nbsp;<a href="https://coronavirus.jhu.edu/map.html/" target="_blank">Johns Hopkins</a>
+            </span>
+
+            <div id="btnGroup">
+                <input class="button buttonPretty" type="button" id="statistics_summary_button" value="Statistics Summary" onclick="g_openDialog();">
+                
+                <input class="button buttonPretty" type="button" title="Display last 60 days of data only"  id="shortDataButton" value="Display Last 60 Days" onclick="gf_setChartShortSpan();">
+                <input class="button buttonPretty" type="button" title="Restore full data display" id="restoreDataButton" value="Restore Full Data" onclick="g_restoreChartSpan();" style="display: none;">
+                
+                <input class="button buttonPretty" type="button" title="Display default chart" id="defaultChartButton" value="Display Default Chart" onclick="g_setActiveChart('go_usCovid19Chart');" style="display: none;">
+                <input class="button buttonPretty" type="button" title="Display daily confirmed cases chart" id="confirmChartButton" value="Display Daily Confirmed" onclick="g_setActiveChart('go_usDailyConfirmedChart');">
+            </div>
+
+            <span id="linksRight" aria-label="Link to the github project for this site (removed)">
+                
+            </span>
+        </div>
+
+        <div id="statistics_summary_dialog">
+            <h3>Statistics Summary: <span class="dateRange"></span></h3>
+            
+            <p class="indent">
+                <span>
+                    Total Confirmed: <span class="confirmed_cases"></span>
+                </span>
+                <br>
+                <span>
+                    Total Hospitalized: <span class="hospitalized_cases"></span>
+                </span>
+                <br>
+                <span>
+                    Total Deaths: <span class="deceased"></span>
+                </span>
+            </p>
+            
+            <p>Deaths/Hospitalized Rate :
+                <span class="dhrate"></span>
+            </p>
+            <p class="indent">
+                Out of <span class="hospitalized_cases"></span> hospitalized individuals, <span class="deceased"></span> of those individuals have died, or <span class="dhrate"></span> of people hospitalized for Covid-19 in the U.S. have died.
+            </p>
+
+            <p>Hospitalization/Confirmed Rate:
+                <span class="hrate"></span>
+            </p>
+            <p class="indent">
+                Out of <span class="confirmed_cases"></span> confirmed cases, <span class="hospitalized_cases"></span> individuals were hospitalized, or <span class="hrate"></span> of people testing positive for Covid-19  in the U.S. are hospitalized.
+            </p>
+
+            <p>Death/Confirmed Rate:
+                <span class="drate"></span>
+            </p>
+            <p class="indent">
+                Out of <span class="confirmed_cases"></span> confirmed cases, <span class="deceased"></span> of those individuals have died, or <span class="drate"></span> of people testing positive for Covid-19  in the U.S. have died.
+            </p>
+
+        </div>
+
+        <!-- hot it up -->
+        <script src="js/uscovid.min.js" type="text/javascript"></script>
+
+    </body>
+</html>
