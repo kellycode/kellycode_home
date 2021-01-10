@@ -1,16 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html class="no_js">
     <head>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-
-            gtag('config', 'UA-171593092-1');
-        </script>
-
         <!-- standard meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1.0, width=device-width">
@@ -67,11 +57,11 @@
         <script src="js/vendor/jquery/jquery-3.3.1.min.js"></script>
         <script src="js/vendor/angular/angular.min.js"></script>
 
-        <!-- javascript ours -->
+        <!-- javascript local -->
         <script src="js/kellycode_contact.js"></script>
         <script src="js/kellycode_utils.js"></script>
 
-        <!-- check for js for css effect but not using atm -->
+        <!-- for Modernizr -->
         <script>
             $('html').removeClass('no_js').addClass('has_js');
         </script>
@@ -176,8 +166,8 @@
                 KELLYCODE_UTILS.Tooltip.init();
             }
 
+            // sets an orientation class on the body tag
             KELLYCODE_UTILS.screenWatch(window);
-
         </script>
 
     </body>
