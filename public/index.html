@@ -3,122 +3,22 @@
     <head>
         <!-- standard meta tags -->
         <meta charset="utf-8" />
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         <meta name="description" content="KellyCode Web Development" />
+
         <meta
             name="keywords"
             content="Javascript Developer. Web Developer, Angular Developer"
         />
-        <meta name="author" content="KellyCode" />
 
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="KellyCode Web Development" />
-        <link rel="canonical" href="https://kellycode.com/index.html" />
-        <meta property="og:title" content="KellyCode" />
-        <meta property="og:url" content="https://kellycode.com/index.html" />
-        <meta property="og:description" content="KellyCode Web Development" />
-        <meta
-            property="og:image"
-            content="https://kellycode.com/kellycode_sm_img.jpg"
-        />
-        <meta
-            property="og:image:secure_url"
-            content="https://kellycode.com/kellycode_sm_img.jpg"
-        />
+        <meta name="author" content="KellyCode" />
 
         <title>KellyCode</title>
 
         <!-- site icons -->
         <link rel="shortcut icon" href="./favicons/favicon.ico" />
-        <link
-            rel="icon"
-            sizes="16x16 32x32 64x64"
-            href="./favicons/favicon.ico"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="196x196"
-            href="./favicons/favicon-192.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="160x160"
-            href="./favicons/favicon-160.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
-            href="./favicons/favicon-96.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="64x64"
-            href="./favicons/favicon-64.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./favicons/favicon-32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./favicons/favicon-16.png"
-        />
-        <link rel="apple-touch-icon" href="./favicons/favicon-57.png" />
-        <link
-            rel="apple-touch-icon"
-            sizes="114x114"
-            href="./favicons/favicon-114.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="72x72"
-            href="./favicons/favicon-72.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="144x144"
-            href="./favicons/favicon-144.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="60x60"
-            href="./favicons/favicon-60.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="./favicons/favicon-120.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="./favicons/favicon-76.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="152x152"
-            href="./favicons/favicon-152.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="./favicons/favicon-180.png"
-        />
-        <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta
-            name="msapplication-TileImage"
-            content="./favicons/favicon-144.png"
-        />
-        <meta name="msapplication-config" content="./browserconfig.xml" />
 
         <!-- site css -->
         <link href="css/kellycode.css" rel="stylesheet" type="text/css" />
@@ -146,7 +46,7 @@
         </script>
     </head>
 
-    <body>
+    <body style="background-color: black">
         <!-- iFrame pulling in a project from Github -->
         <iframe
             aria-label="Just displaying a github project"
@@ -191,99 +91,7 @@
                 </svg>
             </a>
             <span class="kellycode_hover_text"> Github </span>
-
-            <!-- chat dialog trigger -->
-            <div id="chatButton" class="hidden_icon hovering_rt">
-                <img
-                    data-toggle="modal"
-                    data-target="#kContactCenter"
-                    src="img/chat_img.png"
-                    alt=""
-                />
-            </div>
-            <span class="kellycode_hover_text"> Send a messege </span>
         </div>
-
-        <div class="header_content">
-            <span id="contactNotify" class=""></span>
-        </div>
-
-        <!-- Pop-in-and-out display contact form -->
-        <section id="contactWrap" ng-app="contactApp">
-            <div
-                id="kContact"
-                ng-controller="ContactController"
-                ng-class="{ 'contact_shown' : isVisible }"
-            >
-                <section>
-                    <form
-                        id="kContactForm"
-                        name="contactForm"
-                        ng-submit="processForm();"
-                    >
-                        <div class="form-group">
-                            <div id="kContactTitle">
-                                <h5>Contact KellyCode</h5>
-                            </div>
-                            <div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span
-                                            class="input-group-text"
-                                            id="basic-addon1"
-                                            >Name&nbsp;&nbsp;&nbsp;&nbsp;</span
-                                        >
-                                    </div>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        ng-model="formData.username"
-                                        placeholder="Your name"
-                                        aria-label="Your name"
-                                        aria-describedby="basic-addon1"
-                                        required
-                                    />
-                                </div>
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"
-                                            >Message</span
-                                        >
-                                    </div>
-                                    <textarea
-                                        id="kContactText"
-                                        style="resize: none"
-                                        type="text"
-                                        name="contentText"
-                                        ng-model="formData.content"
-                                        class="form-control"
-                                        required
-                                    ></textarea>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    id="contact_cancel"
-                                    class="btn btn-secondary"
-                                    ng-click="cancel();"
-                                >
-                                    Cancel
-                                </button>
-                                <button
-                                    type="submit"
-                                    class="btn btn-primary"
-                                    ng-disabled="contactForm.$invalid"
-                                >
-                                    Submit
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </section>
-            </div>
-        </section>
 
         <script>
             // if we're on a touch device, add a
