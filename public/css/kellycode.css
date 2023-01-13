@@ -16,14 +16,14 @@ body {
 }
 
 html.no_js body {
-    background-image: url("../img/metalbox.jpg");
+    background-color: black;
 }
 
 html.no_js body #kellycode_iframe {
     display: none;
 }
 
-/* Home page main view iframe import from current github animation*/
+/* Home page main view iframe import from a github*/
 #kellycode_iframe {
     position: absolute;
     width: 100vw;
@@ -64,80 +64,12 @@ html.no_js body #kellycode_iframe {
     height: 50px;
 }
 
-.header_content {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    top: 0px;
-    right: 0px;
-    z-index: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.header_content .site_name {
-    letter-spacing: 2px;
-    font-size: 2.5em;
-    font-weight: bold;
-    cursor: default;
-}
-
-.header_content .site_name {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(0, #f22),
-        color-stop(0.15, #f2f),
-        color-stop(0.3, #22f),
-        color-stop(0.45, #2ff),
-        color-stop(0.6, #2f2),
-        color-stop(0.75, #2f2),
-        color-stop(0.9, #f22),
-        color-stop(1, #f22)
-    );
-    background-image: gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(0, #f22),
-        color-stop(0.15, #f2f),
-        color-stop(0.3, #22f),
-        color-stop(0.45, #2ff),
-        color-stop(0.6, #2f2),
-        color-stop(0.75, #2f2),
-        color-stop(0.9, #f22),
-        color-stop(1, #f22)
-    );
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-#contactNotify {
-    font-size: 24px;
-    padding: 0px 20px;
-    border-radius: 25px;
-    color: black;
-    height: 40px;
-    line-height: 40px;
-}
-
 #siteLogo {
     position: absolute;
     left: 5px;
     top: 5px;
     width: 40px;
     height: 40px;
-}
-
-.all_good {
-    background-color: green;
-}
-
-.not_good {
-    background-color: red;
 }
 
 /* CONTACT LINK */
@@ -158,38 +90,4 @@ html.no_js body #kellycode_iframe {
 
 #github svg:hover {
     fill: green;
-}
-
-#contact_button:hover {
-    color: green;
-}
-
-.site_text {
-    font-weight: bold;
-    font-size: 2em;
-}
-
-/* Media Queries */
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .header_content {
-        font-size: 0.75em;
-    }
-    .header_content .site_info {
-        position: fixed;
-        top: 0px;
-        text-align: center;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .header_content {
-        font-size: 0.75em;
-    }
-}
-
-.color_element {
-    animation: pulse 5s infinite;
 }
