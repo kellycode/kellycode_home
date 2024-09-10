@@ -21,8 +21,13 @@ body {
     align-items: stretch;
 }
 
-.flex_grow_div {
+.flex_grow_one {
     flex-grow: 1;
+    position: relative;
+}
+
+.flex_grow_two {
+    flex-grow: 2;
     position: relative;
 }
 
@@ -33,7 +38,7 @@ body {
 #buttons_cont button {
     position: absolute;
     right: 0px;
-    bottom: 0px;
+    top: 30px;
 }
 
 #chart {
@@ -47,6 +52,9 @@ body {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+
+    transform: scale(1.2, 1.2);
+    transform-origin: center top;
 }
 
 .unconfirmed {
@@ -79,4 +87,20 @@ button:hover {
     color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
     user-select: none;
+}
+
+.possibleAilmentName {
+    font-weight: bold;
+}
+
+.possibleSymptomsList {
+    color: #333;
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+.possibleCureList {
+    color: #333;
+    margin-left: 40px;
+    font-size: 0.9em;
 }

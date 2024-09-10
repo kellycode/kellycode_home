@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Sims 4 Medical Diagnosis Chart</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="css/diagnosis.css" rel="stylesheet" type="text/css" />
@@ -22,171 +22,375 @@
                 Sims 4 Doctor's Diagnosis Chart
             </div>
             <div class="container">
-                <div id="doc_symptom_list" class="flex_grow_div">
+                <div id="doc_symptom_list" class="flex_grow_one">
                     <h4>Doc Symptoms</h4>
                     <div>
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="spot_rash" />
-                        Spot Rash
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="cough" id="cough" />
+                        <label for="cough">Cough</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="swirl_rash" />
-                        Swirl Rash
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="dizziness" id="dizziness" />
+                        <label for="dizziness">Dizziness (Spinning stars)</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="stripes_rash" />
-                        Tiger Stripes Rash
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="fever" id="fever" />
+                        <label for="fever">Fever</label>
                         <br />
-                    </div>
-                    <div>
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="head_steam" />
-                        Steam From Ears
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="giggling" id="giggling" />
+                        <label for="giggling">Giggling</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="dizziness" />
-                        Dizziness (Spinning stars)
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="headache" id="headache" />
+                        <label for="headache">Headache</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="headache" />
-                        Headache
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="itchiness" id="itchiness" />
+                        <label for="itchiness">Itchiness</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" data-symptom-type="docs" value="fever" />
-                        Fever
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="sneeze" id="sneeze" />
+                        <label for="sneeze">Sneeze</label>
                         <br />
-                    </div>
-                    <div>
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="stomach_ache" />
-                        Stomach Ache
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="spot_rash" id="spot_rash" />
+                        <label for="spot_rash">Spot Rash</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" data-symptom-type="docs" value="cough" />
-                        Cough
+                        <input
+                            type="checkbox"
+                            name="symptoms"
+                            class="symptom docs"
+                            value="head_steam"
+                            id="head_steam"
+                        />
+                        <label for="head_steam">Steam From Ears</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="sneeze" />
-                        Sneeze
+                        <input
+                            type="checkbox"
+                            name="symptoms"
+                            class="symptom docs"
+                            value="stomach_ache"
+                            id="stomach_ache"
+                        />
+                        <label for="stomach_ache">Stomach Ache</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="swatting" />
-                        Swatting (At invisible objects)
+                        <input type="checkbox" name="symptoms" class="symptom docs" value="swatting" id="swatting" />
+                        <label for="swatting">Swatting (At invisible objects)</label>
                         <br />
-                    </div>
-                    <div>
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="itchiness" />
-                        Itchiness
+                        <input
+                            type="checkbox"
+                            name="symptoms"
+                            class="symptom docs"
+                            value="swirl_rash"
+                            id="swirl_rash"
+                        />
+                        <label for="swirl_rash">Swirl Rash</label>
                         <br />
-                        <input type="checkbox" name="symptoms" class="symptom docs" value="giggling" />
-                        Giggling
+                        <input
+                            type="checkbox"
+                            name="symptoms"
+                            class="symptom docs"
+                            value="stripes_rash"
+                            id="stripes_rash"
+                        />
+                        <label for="stripes_rash">Tiger Stripes Rash</label>
                         <br />
                     </div>
                 </div>
 
-                <div id="vet_symptom_list" class="flex_grow_div">
+                <div id="vet_symptom_list" class="flex_grow_one">
                     <h4>Vet Symptoms</h4>
                     <div class="container">
-                        <div class="flex_grow_div">
+                        <div class="flex_grow_one">
                             <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="fleas" />
-                                Fleas
-                                <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="mouth_moths" />
-                                Mouth Moths
-                                <br />
-                            </div>
-
-                            <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="barfing" />
-                                Barfing
-                                <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="excessive_earwax" />
-                                Excessive Earwax
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="barfing"
+                                    value="barfing"
+                                />
+                                <label for="barfing">Barfing</label>
                                 <br />
                                 <input
                                     type="checkbox"
                                     name="symptoms"
                                     class="symptom vets"
-                                    value="uncontrollable_drooling"
+                                    id="clear_eyes"
+                                    value="clear_eyes"
                                 />
-                                Uncontrollable Drooling
+                                <label for="clear_eyes">Clear Eyes</label>
                                 <br />
-                            </div>
-                            <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="low_temperature" />
-                                Low Temperature
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="clear_nose"
+                                    value="clear_nose"
+                                />
+                                <label for="clear_nose">Clean Nose</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="high_temperature" />
-                                Highemperature
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="dry_eyes"
+                                    value="dry_eyes"
+                                />
+                                <label for="dry_eyes">Dry Eyes</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="unstable_temperature" />
-                                Unstable Temperature
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="dry_nose"
+                                    value="dry_nose"
+                                />
+                                <label for="dry_nose">Dry Nose</label>
                                 <br />
-                            </div>
-                            <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="glowing_nose" />
-                                Glowing Nose
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="dry_skin"
+                                    value="dry_skin"
+                                />
+                                <label for="dry_skin">Dry Skin</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="hot_feet" />
-                                Hot Feet
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="ear_infection"
+                                    value="ear_infection"
+                                />
+                                <label for="ear_infection">Ear Infection</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="icy_fur" />
-                                Icy Fur
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="excessive_earwax"
+                                    value="excessive_earwax"
+                                />
+                                <label for="excessive_earwax">Excessive Earwax</label>
                                 <br />
-                            </div>
-                            <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="raspy_breath" />
-                                Raspy Breath
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="excessively_wet_nose"
+                                    value="excessively_wet_nose"
+                                />
+                                <label for="excessively_wet_nose">Excessively Wet Nose</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="sweet_breath" />
-                                Sweet Breath
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="extreme_lethargy"
+                                    value="extreme_lethargy"
+                                />
+                                <label for="extreme_lethargy">Extreme Lethargy</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="sour_breath" />
-                                Sour Breath
+                                <input type="checkbox" name="symptoms" class="symptom vets" id="fleas" value="fleas" />
+                                <label for="fleas">Fleas</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="glowing_nose"
+                                    value="glowing_nose"
+                                />
+                                <label for="glowing_nose">Glowing Nose</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="golden_poop"
+                                    value="golden_poop"
+                                />
+                                <label for="golden_poop">Golden Poop</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="healthy_skin"
+                                    value="healthy_skin"
+                                />
+                                <label for="healthy_skin">Healthy Skin</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="high_temperature"
+                                    value="high_temperature"
+                                />
+                                <label for="high_temperature">High Temperature</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="hot_feet"
+                                    value="hot_feet"
+                                />
+                                <label for="hot_feet">Hot Feet</label>
                                 <br />
                             </div>
                         </div>
 
-                        <div class="flex_grow_div">
-                            <!-- Symptoms -->
+                        <div class="flex_grow_one">
                             <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="dry_eyes" />
-                                Dry Eues
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="icy_fur"
+                                    value="icy_fur"
+                                />
+                                <label for="icy_fur">Icy Fur</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="watery_eyes" />
-                                Watery Eyes
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="inflamed_cuteness"
+                                    value="inflamed_cuteness"
+                                />
+                                <label for="inflamed_cuteness">Inflamed Cuteness</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="dry_nose" />
-                                Dry Nose
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="low_temperature"
+                                    value="low_temperature"
+                                />
+                                <label for="low_temperature">Low Temperature</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="dry_skin" />
-                                Dry Skin
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="mouth_moths"
+                                    value="mouth_moths"
+                                />
+                                <label for="mouth_moths">Mouth Moth</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="excessively_wet_nose" />
-                                Excessively Wet Nose
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="normal_temperature"
+                                    value="normal_temperature"
+                                />
+                                <label for="normal_temperature">Normal Temperature</label>
                                 <br />
-                            </div>
-                            <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="extreme_lethargy" />
-                                Extreme Lethargy
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="overly_moist_skin"
+                                    value="overly_moist_skin"
+                                />
+                                <label for="overly_moist_skin">Overly Moist Skin</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="sluggish_heartbeat" />
-                                Sluggish Heartbeat
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="rainbow_poop"
+                                    value="rainbow_poop"
+                                />
+                                <label for="rainbow_poop">Rainbow Poop</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="rapid_heartbeat" />
-                                Rapid Neartbeat
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="rapid_heartbeat"
+                                    value="rapid_heartbeat"
+                                />
+                                <label for="rapid_heartbeat">Rapid Neartbeat</label>
                                 <br />
-                            </div>
-                            <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="inflamed_cuteness" />
-                                Inflamed Cuteness
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="raspy_breath"
+                                    value="raspy_breath"
+                                />
+                                <label for="raspy_breath">Raspy Breath</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="overly_moist_skin" />
-                                Overly Moist Skin
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="sluggish_heartbeat"
+                                    value="sluggish_heartbeat"
+                                />
+                                <label for="sluggish_heartbeat">Sluggish Heartbeat</label>
                                 <br />
-                            </div>
-                            <div>
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="rainbow_poop" />
-                                Rainbow Poop
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="sour_breath"
+                                    value="sour_breath"
+                                />
+                                <label for="sour_breath">Sour Breath</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="golden_poop" />
-                                Golden Poop
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="standard_smelly_breath"
+                                    value="standard_smelly_breath"
+                                />
+                                <label for="standard_smelly_breath">Standard Smelly Breath</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="stinky_fur" />
-                                Stinky Fur
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="stinky_fur"
+                                    value="stinky_fur"
+                                />
+                                <label for="stinky_fur">Stinky Fur</label>
                                 <br />
-                                <input type="checkbox" name="symptoms" class="symptom vets" value="ear_infection" />
-                                Ear Infection
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="sweet_breath"
+                                    value="sweet_breath"
+                                />
+                                <label for="sweet_breath">Sweet Breath</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="uncontrollable_drooling"
+                                    value="uncontrollable_drooling"
+                                />
+                                <label for="uncontrollable_drooling">Uncontrollable Drooling</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="unstable_temperature"
+                                    value="unstable_temperature"
+                                />
+                                <label for="unstable_temperature">Unstable Temperature</label>
+                                <br />
+                                <input
+                                    type="checkbox"
+                                    name="symptoms"
+                                    class="symptom vets"
+                                    id="watery_eyes"
+                                    value="watery_eyes"
+                                />
+                                <label for="watery_eyes">Watery Eyes</label>
                                 <br />
                             </div>
                         </div>
@@ -195,11 +399,11 @@
             </div>
 
             <div class="container">
-                <div id="diagnosis_list" class="flex_grow_div">
+                <div id="diagnosis_list" class="flex_grow_one">
                     <h4>Possible Diagnosis</h4>
-                    <div>No diagnosis available</div>
+                    <div id="diagnoses_info">No diagnosis available</div>
                 </div>
-                <div id="buttons_cont" class="flex_grow_div">
+                <div id="buttons_cont" class="flex_grow_one">
                     <button type="button" title="Reset" onclick="symptomsClearAll();">New Patient (Reset)</button>
                 </div>
             </div>
