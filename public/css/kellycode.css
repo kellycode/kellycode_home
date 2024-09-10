@@ -38,7 +38,7 @@ html.no_js body #kellycode_iframe {
 #leftSideBar {
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 10px;
     width: 50px;
     height: 50px;
     overflow: hidden;
@@ -47,7 +47,7 @@ html.no_js body #kellycode_iframe {
 
 #leftSideBar:hover {
     height: 250px;
-    width: 250px;
+    width: 50px;
 }
 
 #leftSideBar .hidden_icon {
@@ -72,11 +72,16 @@ html.no_js body #kellycode_iframe {
     height: 40px;
 }
 
+#siteLogo img {
+    width: 40px;
+    height: 40px;
+}
+
 /* CONTACT LINK */
 #github {
     position: absolute;
     left: 5px;
-    top: 55px;
+    top: 60px;
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -90,4 +95,20 @@ html.no_js body #kellycode_iframe {
 
 #github svg:hover {
     fill: green;
+}
+
+#solitaire1 {
+    position: absolute;
+    left: 5px;
+    top: 110px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+#solitaire1 img {
+    width: 40px;
+    height: 40px;
 }
