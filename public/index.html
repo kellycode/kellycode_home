@@ -18,26 +18,52 @@
         <!-- for Modernizr -->
         <script>
             $("html").removeClass("no_js").addClass("has_js");
+
+            if (Modernizr.touch) {
+                $("html").addClass("has_touch");
+            } else {
+                $("html").addClass("no_touch");
+            }
         </script>
     </head>
 
     <body style="background-color: black">
         <!-- just an iFrame pulling in a project from Github -->
-        <iframe aria-label="Just displaying a github project" name="k_iframe" id="kellycode_iframe" src="https://kellycode.github.io/dedsec-screen-mockup/" height="100%" width="100%" frameborder="0"></iframe>
+        <iframe
+            aria-label="Just displaying a github project"
+            name="k_iframe"
+            id="kellycode_iframe"
+            src="https://kellycode.github.io/dedsec-screen-mockup/"
+            height="100%"
+            width="100%"
+            frameborder="0"
+        ></iframe>
 
         <!--src="./test_site/index.html"-->
 
         <!-- sidebar and it's icons -->
         <div id="leftSideBar" class="hide_icons">
-
             <!-- kellycode logo -->
-            <a id="siteLogo" class="hidden_icon hovering_rt" href="https://kellycode.github.io/dedsec-screen-mockup/" target="k_iframe">
+            <a
+                id="siteLogo"
+                class="hidden_icon hovering_rt"
+                href="https://kellycode.github.io/dedsec-screen-mockup/"
+                target="k_iframe"
+            >
                 <img id="siteLogo" class="hovering_rt" src="img/kellycode_logo_sm.png" alt="" />
             </a>
 
             <!-- github link -->
             <a id="github" class="hidden_icon hovering_rt" href="https://github.com/kellycode/" target="_blank">
-                <svg class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" height="40" width="40" aria-hidden="false">
+                <span class="name_tooltip">KellyCode Github</span>
+                <svg
+                    class="octicon octicon-mark-github"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    height="40"
+                    width="40"
+                    aria-hidden="false"
+                >
                     <path
                         class=""
                         fill-rule="evenodd"
@@ -46,9 +72,26 @@
                 </svg>
             </a>
 
-            <!-- solitaire game link to local iframe -->
-            <a id="solitaire1" class="hidden_icon hovering_rt" href="https://kellycode.github.io/solitaire-game/" target="k_iframe">
-                <img src="img/cards_2.png"alt=""/>
+            <!-- unity webgl solitaire game link to local iframe -->
+            <a
+                id="solitaire1"
+                class="desktop_only game hidden_icon hovering_rt"
+                href="https://kellycode.github.io/unity-webgl-solitaire/"
+                target="k_iframe"
+            >
+                <span class="name_tooltip">WebGL Solitaire</span>
+                <img src="img/card.png" alt="Solitaire" />
+            </a>
+
+            <!-- old school bejeweled style game link to local iframe -->
+            <a
+                id="bevegged"
+                class="desktop_only game hidden_icon hovering_rt"
+                href="https://kellycode.github.io/be-vegged/"
+                target="k_iframe"
+            >
+                <span class="name_tooltip">Be Vegged Match Game</span>
+                <img src="img/tomato.png" alt="Be Vegged" />
             </a>
         </div>
 
