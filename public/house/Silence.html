@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Text Editor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+            gap: 2px;
+            background: #ccc;
+        }
+        
+        textarea {
+            flex: 1;
+            padding: 20px;
+            background: white;
+            border: none;
+            resize: none;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            outline: none;
+        }
+        
+        textarea:focus {
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea>
+Je ne dis pas ces mots
+Que tu veux entendre
+Je mets seulement ma bouche
+Sur ta bouche
+Dehors cette lourde pluie
+Qui m'attend
+Si sombre et si dure
+
+Il y a des moments
+Où c'est mieux
+De ne pas toucher
+De ne pas toucher
+Le silence
+
+Demain quand je pars
+Je te laisse dormir
+Je vole seulement
+Un peu de ton odeur
+Que je trouve dans tes cheveux
+Que je trouve dans ton lit
+Je pars sans rien dire
+Dehors il y a cette lourde pluie
+Qui a vu ton corps
+Si pâle et si tendre
+Maintenant elle essaye
+De laver cette ville
+        </textarea>
+        <textarea>
+I don't say those words
+That you want to hear
+I only put my mouth
+On your mouth
+Outside, this heavy rain
+Awaits me
+So dark and so harsh
+
+There are times
+When it's better
+Not to touch
+Not to touch
+The silence
+
+Tomorrow when I leave
+I'll let you sleep
+I'll only steal
+A little of your scent
+That I find in your hair
+That I find in your bed
+I'll leave without a word
+Outside, there's this heavy rain
+That has seen your body
+So pale and so tender
+Now it tries
+To wash this city clean
+        </textarea>
+    </div>
+</body>
+</html>
