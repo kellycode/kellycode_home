@@ -145,6 +145,10 @@ html.no_js body #kellycode_iframe {
     top: 115px;
 }
 
-#chess3d {
+#pacman {
     top: 160px;
+}
+
+#chess3d {
+    top: 205px;
 }
