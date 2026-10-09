@@ -46,7 +46,7 @@ html.no_js body #kellycode_iframe {
 }
 
 #leftSideBar:hover {
-    height: 250px;
+    height: 300px;
 }
 
 #leftSideBar .hidden_icon {
@@ -151,4 +151,8 @@ html.no_js body #kellycode_iframe {
 
 #chess3d {
     top: 205px;
+}
+
+#refrigerants {
+    top: 250px;
 }
